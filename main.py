@@ -478,7 +478,7 @@ def main():
 
     app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, welcome_member))
     app.add_handler(MessageHandler(filters.StatusUpdate.LEFT_CHAT_MEMBER, goodbye_member))
-    app.add_handler(MessageHandler(filters.TEXT & \~filters.COMMAND, anti_spam))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, anti_spam))
 
     app.add_handler(CommandHandler("start", start_cmd))
     app.add_handler(CommandHandler("help", help_cmd))
